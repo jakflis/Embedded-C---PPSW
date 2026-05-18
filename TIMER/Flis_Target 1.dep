@@ -1,0 +1,15 @@
+Dependencies for Project 'Flis', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x51C81B7E)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\RV31\INC-I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\CMSIS\Include-I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\Inc\Philips--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\keyboard.c)(0x69D3A630)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\RV31\INC-I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\CMSIS\Include-I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\Inc\Philips-o .\keyboard.o --omf_browse .\keyboard.crf --depend .\keyboard.d)
+I (C:\Users\kubaf\AppData\Local\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x51C81BAC)
+I (C:\Users\kubaf\Desktop\STUDIA\SEMESTR 2\Podstawy programowania systemow wbudowanych\CwiczeniaLaboratoryjne\TIMER\2\keyboard.h)(0x69D3A6FA)
+F (.\led.c)(0x69D3B0AC)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\RV31\INC-I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\CMSIS\Include-I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\Inc\Philips-o .\led.o --omf_browse .\led.crf --depend .\led.d)
+I (C:\Users\kubaf\AppData\Local\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x51C81BAC)
+I (C:\Users\kubaf\Desktop\STUDIA\SEMESTR 2\Podstawy programowania systemow wbudowanych\CwiczeniaLaboratoryjne\TIMER\2\led.h)(0x69D3A5C8)
+F (.\main.c)(0x69DE90E6)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\RV31\INC-I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\CMSIS\Include-I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\Inc\Philips-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Users\kubaf\Desktop\STUDIA\SEMESTR 2\Podstawy programowania systemow wbudowanych\CwiczeniaLaboratoryjne\TIMER\2\led.h)(0x69D3A5C8)
+I (C:\Users\kubaf\Desktop\STUDIA\SEMESTR 2\Podstawy programowania systemow wbudowanych\CwiczeniaLaboratoryjne\TIMER\2\keyboard.h)(0x69D3A6FA)
+I (C:\Users\kubaf\Desktop\STUDIA\SEMESTR 2\Podstawy programowania systemow wbudowanych\CwiczeniaLaboratoryjne\TIMER\2\timer.h)(0x69DE90E3)
+F (.\timer.c)(0x69FA3AF2)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\RV31\INC-I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\CMSIS\Include-I C:\Users\kubaf\AppData\Local\Keil_v5\ARM\Inc\Philips-o .\timer.o --omf_browse .\timer.crf --depend .\timer.d)
+I (C:\Users\kubaf\AppData\Local\Keil_v5\ARM\Inc\Philips\LPC21xx.H)(0x51C81BAC)
+I (C:\Users\kubaf\Desktop\STUDIA\SEMESTR 2\Podstawy programowania systemow wbudowanych\CwiczeniaLaboratoryjne\TIMER\2\timer.h)(0x69DE90E3)
