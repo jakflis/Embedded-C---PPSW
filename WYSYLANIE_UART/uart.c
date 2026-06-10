@@ -1,6 +1,7 @@
 #include <LPC210X.H>
 #include "uart.h"
 #include "string.h"
+#include "command_decoder.h"
 
 /************ UART ************/
 // U0LCR Line Control Register
@@ -30,6 +31,8 @@ char cCharCtr=0;
 struct ReceiverBuffer sRxBuffer;
 struct TransmiterBuffer sTxBuffer;
 char cWyslanyZnak;
+unsigned char fCalcReady = 0;
+unsigned int uiCalcResult;
 
 ///////////////////////////////////////////
 __irq void UART0_Interrupt (void) {
@@ -131,4 +134,22 @@ void Transmiter_SendString(char cString[]){
 enum eTransmiterStatus Transmiter_GetStatus(void){
 	
 	return sTxBuffer.eStatus;
+}
+
+void Calc(void){
+	if(asToken[0].eType == KEYWORD && asToken[0].uValue.eKeyword == CA){
+	  if(asToken[1].eType == NUMBER){
+		  uiCalcResult = (asToken[1].uValue.uiValue)*2;
+			  fCalcReady = 1;
+	  }
+  }
+}
+
+unsigned char Calc_GetStatus(void){
+	return fCalcReady;
+}
+
+unsigned int Calc_Result(void){
+	fCalcReady = 0;
+	return uiCalcResult;
 }

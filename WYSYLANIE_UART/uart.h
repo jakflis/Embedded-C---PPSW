@@ -35,4 +35,8 @@ char Transmiter_GetCharacterFromBuffer(void);
 void Transmiter_SendString(char cString[]);
 enum eTransmiterStatus Transmiter_GetStatus(void);
 
+void Calc(void);
+unsigned char Calc_GetStatus(void);
+unsigned int Calc_Result(void);
+
 #endif

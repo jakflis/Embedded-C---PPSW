@@ -5,8 +5,6 @@
 #include "command_decoder.h"
 
 struct Watch sWatch;
-unsigned char fCalcReady = 0;
-unsigned int uiCalcResult;
 
 int main(){
 	
@@ -21,13 +19,8 @@ int main(){
 		if(eReceiver_GetStatus() == READY){
 			Receiver_GetStringCopy(cReceivedString);
 			DecodeMsg(cReceivedString);
-			if(asToken[0].eType == KEYWORD && asToken[0].uValue.eKeyword == CA){
-				if(asToken[1].eType == NUMBER){
-					uiCalcResult = (asToken[1].uValue.uiValue)*2;
-					fCalcReady = 1;
-				}
+			Calc();
 			}
-		}
 					
 		if(Transmiter_GetStatus() == FREE){
 			if(sWatch.fSecondsValueChanged == 1){
@@ -42,11 +35,10 @@ int main(){
 				Transmiter_SendString(cTransmitString);
 				sWatch.fMinutesValueChanged = 0;
 			}
-			else if(fCalcReady == 1){
+			else if(Calc_GetStatus() == 1){
 				CopyString("calc ", cTransmitString);
-				AppendUIntToString(uiCalcResult, cTransmitString);
+				AppendUIntToString(Calc_Result(), cTransmitString);
 				Transmiter_SendString(cTransmitString);
-				fCalcReady = 0;
 			}
 		}
 	}
