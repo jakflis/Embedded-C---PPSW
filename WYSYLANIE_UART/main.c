@@ -12,7 +12,7 @@ int main(){
 	char cReceivedString[RECEIVER_SIZE];
 	
 	UART_InitWithInt(9600);
-	Timer0Interrupts_Init(500000, WatchUpdate);
+	Timer0Interrupts_Init(1000000, WatchUpdate);
 	
 	
 	while(1){
